@@ -123,6 +123,13 @@ public class ActivityOne extends Activity {
 		public void onSaveInstanceState(Bundle savedInstanceState){
 			//TODO:  save state information with a collection of key-value pairs & save all  count variables
 
+            savedInstanceState.putInt("onStartCount", onStartCount);
+            savedInstanceState.putInt("onStopCount", onStopCount);
+            savedInstanceState.putInt("onRestartCount", onRestartCount);
+            savedInstanceState.putInt("onPauseCount", onPauseCount);
+            savedInstanceState.putInt("onDestroyCount", onDestroyCount);
+            savedInstanceState.putInt("onCreateCount", onCreateCount);
+            savedInstanceState.putInt("onResumeCount", onResumeCount);
 		}
 
 
@@ -130,7 +137,17 @@ public class ActivityOne extends Activity {
             startActivity(new Intent(this, ActivityTwo.class));
 		}
 
-
+        @Override
+        public void onRestoreInstanceState(Bundle bundle) {
+            super.onRestoreInstanceState(bundle);
+            onStartCount = bundle.getInt("onStartCount");
+            onStopCount = bundle.getInt("onStopCount");
+            onRestartCount = bundle.getInt("onRestartCount");
+            onPauseCount = bundle.getInt("onPauseCount");
+            onDestroyCount = bundle.getInt("onDestroyCount");
+            onCreateCount = bundle.getInt("onCreateCount");
+            onResumeCount = bundle.getInt("onResumeCount");
+        }
         private void displayCounts () {
             ((TextView) findViewById(R.id.create)).setText(getString(R.string.onCreate) + " " +
                     onCreateCount);

@@ -1,4 +1,4 @@
-#Fri Sep 08 16:14:37 EDT 2017
+#Fri Sep 08 16:25:03 EDT 2017
 base.0=C\:\\Users\\asdfg\\AndroidStudioProjects\\lab03-skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_7
 renamed.0=classes.dex
 file.0=C\:\\Users\\asdfg\\AndroidStudioProjects\\lab03-skeleton\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\5\\slice_7\\classes.dex
